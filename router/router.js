@@ -24,6 +24,9 @@ const router = express.Router()
 const {getTestimonials, postUsers, getBasicSteps, getSpecificsSteps, getMeals, getCreatedMeals, postCreatedMeals, putCreatedMeals, deleteCreatedMeals} = require('../controllers/controllers')
 
     // Ruta '/testimonials'
+    router.route('/')
+        .get(getTestimonials)
+
     router.route('/testimonials')
         .get(getTestimonials)
 
