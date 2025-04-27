@@ -102,14 +102,11 @@ const postUsers = async(req, res, next)=>{
 */
 
 const getCreatedMeals = async(req,res,next)=>{
-    try {
-        console.log('Intentando recuperar datos de la colección user-meals...');
-        const userMeals = await mongoose.connection.db.collection('user-meals').find().toArray();
-        console.log('Datos recuperados:', userMeals);
-        res.json(userMeals);
-    } catch (err) {
-        console.error('Error en la ruta /user-meals:', err);
-        res.status(500).json({ error: 'Error interno del servidor', detalle: err.message });
+    try{
+        const getCreatedMeals = await CreatedMeals.find()
+        res.json(getCreatedMeals)
+    } catch(err){
+        next({statusText: 'Error al buscar platos de comida'})
     }
 }
 
