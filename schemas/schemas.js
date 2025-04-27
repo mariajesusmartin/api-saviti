@@ -22,6 +22,8 @@ const conectar =()=>mongoose.connect(process.env.BBDD_MONGO)
 // Ejecución de la función
 conectar()
 
+console.log('Estado de conexión:', mongoose.connection.readyState); // Esperado: "1"
+
 /** Esquema de testimonios del usuario
  * 
  * Esquema que establece la estructura de los datos de la colección "testimonials"
