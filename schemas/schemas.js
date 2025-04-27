@@ -14,8 +14,11 @@ require('dotenv').config()
 
 // Función para conectar con las diferentes colecciones de la base de datos de MongoDB
 const conectar =()=>mongoose.connect(process.env.BBDD_MONGO)
-                    .then(()=>console.log('Conectando con MongoDB'))
-                    .catch(err=>console.log(err))
+.then(() => console.log('Conexión exitosa a MongoDB'))
+.catch(err => {
+    console.error('Error al conectar a MongoDB:', err);
+});
+
 // Ejecución de la función
 conectar()
 
@@ -33,6 +36,7 @@ const testimonialsSchema = new mongoose.Schema(
     {customer: String, note: String, stars: String, testimony: String, city: String},
     {collection: 'testimonials', versionKey: false}
 )
+
 
 /** Esquema de pasos básicos para el proceso de pedido
  * 
