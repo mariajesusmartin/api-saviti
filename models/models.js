@@ -17,7 +17,7 @@ const mongoose = require('mongoose')
  * @model Testimonials
  * @schema testimonialsSchema
  */
-const Testimonials = mongoose.model('Testimonials', testimonialsSchema)
+const Testimonials = mongoose.model('testimonials', testimonialsSchema)
 
 
 /**
@@ -27,7 +27,7 @@ const Testimonials = mongoose.model('Testimonials', testimonialsSchema)
  * @model BasicSteps
  * @schema basicstepsSchema
  */
-const BasicSteps = mongoose.model('BasicSteps', basicstepsSchema)
+const BasicSteps = mongoose.model('basicsteps', basicstepsSchema)
 
 /**
  * Modelo SpecificSteps.
@@ -36,7 +36,7 @@ const BasicSteps = mongoose.model('BasicSteps', basicstepsSchema)
  * @model SpecificSteps
  * @schema specificstepsSchema
  */
-const SpecificSteps = mongoose.model('SpecificSteps', specificstepsSchema)
+const SpecificSteps = mongoose.model('specificsteps', specificstepsSchema)
 
 /**
  * Modelo Meals.
@@ -45,7 +45,7 @@ const SpecificSteps = mongoose.model('SpecificSteps', specificstepsSchema)
  * @model Meals
  * @schema mealsSchema
  */
-const Meals = mongoose.model('Meals', mealsSchema)
+const Meals = mongoose.model('meals', mealsSchema)
 
 /**
  * Modelo Users.
@@ -54,7 +54,7 @@ const Meals = mongoose.model('Meals', mealsSchema)
  * @model Users
  * @schema usersSchema
  */
-const Users = mongoose.model('Users', usersSchema)
+const Users = mongoose.model('users', usersSchema)
 
 /**
  * Modelo CreatedMeals.
@@ -63,7 +63,7 @@ const Users = mongoose.model('Users', usersSchema)
  * @model CreatedMeals
  * @schema createdMealsSchema
  */
-const CreatedMeals = mongoose.model('UserMeals', createdMealsSchema)
+const CreatedMeals = mongoose.model('usermeals', createdMealsSchema)
 
 module.exports={
     Testimonials,
