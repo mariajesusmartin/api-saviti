@@ -11,10 +11,9 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
-const mongoURI = process.env.BBDD_MONGO
 
 // Función para conectar con las diferentes colecciones de la base de datos de MongoDB
-const conectar =()=>mongoose.connect(mongoURI)
+const conectar =()=>mongoose.connect(process.env.BBDD_MONGO)
                     .then(()=>console.log('Conectando con MongoDB'))
                     .catch(err=>console.log(err))
 // Ejecución de la función
